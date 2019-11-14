@@ -1,0 +1,87 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/newsDetail/newsDetail",
+			"style": {
+				"navigationBarTitleText": "新闻详情"
+			}
+		},
+		{
+		    "path" : "pages/HM-chat/HM-chat",
+		    "style" : {
+				"navigationBarTitleText":"聊天室",
+		    	"navigationBarBackgroundColor":"#f2f2f2",
+		    	"backgroundColorTop":"#e5e5e5",
+		    	"backgroundColorBottom":"#e5e5e5",
+		    	"app-plus":{
+		    		"softinputNavBar":"none",
+		    		"bounce":"none"
+		    	}
+		    }
+		}
+		,{
+		    "path" : "pages/HM-chat/HM-details/HM-details",
+		    "style" : {
+				"navigationBarBackgroundColor":"#cf3c35",
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"红包",
+				"backgroundColorTop":"#cf3c35",
+				"backgroundColorBottom":"#fff"
+			}
+		}
+		,{
+		    "path" : "pages/HM-chat/HM-hand/HM-hand",
+		    "style" : {
+		    	"navigationBarBackgroundColor":"#cf3c35",
+		    	"navigationBarTextStyle":"white",
+		    	"navigationBarTitleText":"发红包",
+		    	"backgroundColorTop":"#cf3c35",
+		    	"backgroundColorBottom":"#fff",
+				"app-plus":{
+					"softinputNavBar":"none",
+					"bounce":"none"
+				}
+		    }
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#7A7E83",
+	    "selectedColor": "#3cc51f",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/index/index",
+	        "iconPath": "static/logo.png",
+	        "selectedIconPath": "static/logo.png",
+	        "text": "首页"
+	    }, {
+	        "pagePath": "pages/HM-chat/HM-chat",
+	        "iconPath": "static/logo.png",
+	        "selectedIconPath": "static/logo.png",
+	        "text": "聊天"
+	    }, {
+	        "pagePath": "pages/my/my",
+	        "iconPath": "static/logo.png",
+	        "selectedIconPath": "static/logo.png",
+	        "text": "我的"
+	    }]
+	}
+}
