@@ -1,10 +1,6 @@
 <template>
 	<view class="content">
-		<uni-card v-for="(item,i) in newsList" :key="i" :title="'热点新闻'+(i+1)">
-			<view class="listNews" @click="toDetail(item2.cIndex)" v-for="(item2,i2) in item" :show-arrow="false" :key="i2">
-				{{item2.text}}
-			</view>
-		</uni-card>
+		<uni-indexed-list :options="list" :showSelect="false" @click="toChat"></uni-indexed-list>
 	</view>
 </template>
 
@@ -13,44 +9,58 @@
 		mapState,
 		mapMutations
 	} from 'vuex'
-	
+
 	import {
-		uniCard,
-		uniList,
-		uniListItem,
+		uniIndexedList
 	} from '@dcloudio/uni-ui'
 	export default {
 		data() {
 			return {
-				newsList: []
+				list: [{
+					"letter": "A",
+					"data": [
+						"阿刚1",
+						"阿刚2",
+						"阿刚3",
+						"阿刚4",
+						"阿刚5",
+						"阿刚6"
+					]
+				}, {
+					"letter": "X",
+					"data": [
+						"小白1",
+						"小白2",
+						"小白3",
+						"小白4",
+						"小白5"
+					]
+				}]
 			}
 		},
 		components: {
-			uniCard,
-			uniList,
-			uniListItem,
+			uniIndexedList
 		},
 		computed: {
 			...mapState(['num'])
 		},
 		onLoad() {
-			this.$http.request({
-				method: "GET",
-				url: "/getNewsTitle",
-				header: {},
-				data: {}
-			}).then(res => {
-				this.newsList = res
-			});
+			// this.$http.request({
+			// 	method: "GET",
+			// 	url: "/getNewsTitle",
+			// 	header: {},
+			// 	data: {}
+			// }).then(res => {
+			// 	this.newsList = res
+			// });
 		},
 		methods: {
 			...mapMutations(['changeNum']),
-			toDetail(cIndex) {
+			toChat(){
 				uni.navigateTo({
-					url: '/pages/newsDetail/newsDetail?cIndex=' + cIndex
+					url: `/pages/HM-chat/HM-chat?cIndex=${1}`
 				});
-			},
-			change() {}
+			}
 		}
 	}
 </script>
@@ -81,13 +91,15 @@
 		font-size: 36rpx;
 		color: #8f8f94;
 	}
-	.listNews{
+
+	.listNews {
 		border-bottom: 1px solid #999;
 		margin-bottom: 20upx;
 		padding-bottom: 20upx;
 	}
-	.listNews:nth-last-of-type(1){
-		border:none;
+
+	.listNews:nth-last-of-type(1) {
+		border: none;
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}

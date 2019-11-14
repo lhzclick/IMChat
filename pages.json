@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "好友新闻"
 			}
 		},
 		{
@@ -16,6 +16,12 @@
 			"path": "pages/newsDetail/newsDetail",
 			"style": {
 				"navigationBarTitleText": "新闻详情"
+			}
+		},
+		{
+			"path": "pages/chatFriend/chatFriend",
+			"style": {
+				"navigationBarTitleText": "好友列表"
 			}
 		},
 		{
@@ -71,9 +77,9 @@
 	        "pagePath": "pages/index/index",
 	        "iconPath": "static/logo.png",
 	        "selectedIconPath": "static/logo.png",
-	        "text": "首页"
+	        "text": "好友新闻"
 	    }, {
-	        "pagePath": "pages/HM-chat/HM-chat",
+	        "pagePath": "pages/chatFriend/chatFriend",
 	        "iconPath": "static/logo.png",
 	        "selectedIconPath": "static/logo.png",
 	        "text": "聊天"
