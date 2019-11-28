@@ -14,7 +14,7 @@ function endLoading() {
 }
 
 http.setConfig((config) => { /* 设置全局配置 */
-  config.baseUrl = 'https://api.liuhu66.cn' /* 根域名不同 */
+  config.baseUrl = 'http://api.liuhu66.cn' /* 根域名不同 */
   config.header = {
     ...config.header,
   }
